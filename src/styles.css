@@ -1,0 +1,32 @@
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+.toast {
+  background: #333;
+  margin: 5px 0;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  animation: fadeIn 0.3s;
+}
+.toast.success {
+  background-color: rgb(17, 132, 66);
+}
+.toast.error {
+  background-color: red;
+}
+.toast.info {
+  background-color: rgb(42, 143, 193);
+}
+.x-btn {
+  color: white; /* White "X" icon */
+  background-color: inherit; /* Inherits background from parent */
+  border: none; /* No border */
+  font-size: 20px; /* Adjust as needed */
+  cursor: pointer; /* Pointer on hover */
+  padding: 0px 8px; /* Optional spacing */
+  margin-left: 50px;
+}
