@@ -4,6 +4,8 @@ import CheckBoxTree from "./components/ChecBoxTree";
 import EventBus from "./EventBus";
 import ToastProvider from "./ToastProvider";
 import { checkBoxData } from "./data/checkBoxData";
+import NestedComment from "./components/NestedComment";
+import commentData from "./data/comments.json";
 
 const App = () => {
   const addToast = () => {
@@ -25,6 +27,8 @@ const App = () => {
       <button onClick={updateToast}>Update Toast</button>
       <button onClick={deleteToast}>Delete Toast</button>
       <CheckBoxTree data={checkBoxData}/>
+      <h1>Nested Comment System</h1>
+      <NestedComment comments={commentData} onSubmit={() => {}} onEdit={() => {}} onDelete={() => {}} onUpVote={() => {}} onDownVote={() => {}}/>
     </>
   );
 };
