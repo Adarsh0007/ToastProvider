@@ -1,13 +1,13 @@
 const EventBus = {
   events: {},
-  on(event, listner) {
-    (this.events[event] ||= []).push(listner);
+  on(event, listener) {
+    (this.events[event] ||= []).push(listener);
   },
-  off(event, listner) {
-    this.events[event] = this.events[event]?.filter((l) => l !== listner);
+  off(event, listener) {
+    this.events[event] = this.events[event]?.filter((l) => l !== listener);
   },
   emit(event, data) {
-    (this.events[event] || []).forEach((listner) => listner(data));
+    (this.events[event] || []).forEach((listener) => listener(data));
   },
 };
 

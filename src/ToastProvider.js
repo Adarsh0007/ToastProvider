@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventBus from "./EventBus";
 import "./styles.css";
-let toasdId = 0;
+let toastId = 0;
 const ToastProvider = () => {
   const [toasts, setToasts] = useState([]);
 
@@ -11,7 +11,7 @@ const ToastProvider = () => {
   }, []);
 
   const handleToast = (data) => {
-    const id = toasdId++;
+    const id = toastId++;
     setToasts((prev) => [...prev, { ...data, id }]);
 
     setTimeout(() => {

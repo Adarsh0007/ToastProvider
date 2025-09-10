@@ -4,7 +4,7 @@ import useDebounce from "../hooks/useDebounce";
 const SearchBox = () => {
   const [text, setText] = useState("");
   const debouncedText = useDebounce(text, 3000);
-  console.log("Without Debounced Text", debouncedText);
+  console.log("Without Debounced Text", text);
   useEffect(() => {
     if (debouncedText) {
       console.log("Debounced Text", debouncedText);

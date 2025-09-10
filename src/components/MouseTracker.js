@@ -8,7 +8,7 @@ const MouseTracker = () => {
   useEffect(() => {
     const handler = (e) => setPos({ x: e.clientX, y: e.clientY });
     window.addEventListener("mousemove", handler);
-    return () => removeEventListener("mousemove", handler);
+    return () => window.removeEventListener("mousemove", handler);
   }, []);
 
   return (

@@ -1,7 +1,9 @@
 import MouseTracker from "./components/MouseTracker";
 import SearchBox from "./components/SerachBox";
+import CheckBoxTree from "./components/ChecBoxTree";
 import EventBus from "./EventBus";
 import ToastProvider from "./ToastProvider";
+import { checkBoxData } from "./data/checkBoxData";
 
 const App = () => {
   const addToast = () => {
@@ -17,10 +19,12 @@ const App = () => {
     <>
       <SearchBox />
       <MouseTracker />
+      <CheckBoxTree />
       <ToastProvider />
       <button onClick={addToast}>Add Toast</button>
       <button onClick={updateToast}>Update Toast</button>
       <button onClick={deleteToast}>Delete Toast</button>
+      <CheckBoxTree data={checkBoxData}/>
     </>
   );
 };
